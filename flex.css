@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+header, main,section,article,nav,footer{
+    border: 1px solid gray;
+    padding: 10px;
+}
+article{
+    background-color: aqua;
+}
+article header{
+    background-color: lightcoral;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    align-items: center;
+}
+section>article:nth-child(1){
+    background-color: blueviolet;
+    order: 5;
+}
+section>article:nth-child(6){
+    background-color: chartreuse;
+    order: 6;
+}
+section article{
+    flex: 1 1 200px;
+}
+nav a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0px;
+}
+#listaval #menu{
+    display: flex;
+}
+#listaval{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width:600px) {
+    section{
+        flex-direction: column;
+    }    
+}
